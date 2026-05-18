@@ -1,0 +1,1588 @@
+html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New RK Glass &amp; Plywood Centre | Premium Interior Solutions in Varanasi</title>
+  <meta name="description" content="Premium plywood, glass, laminates, hardware, decorative panels and modern interior products in Varanasi." />
+  <meta property="og:title" content="New RK Glass &amp; Plywood Centre | Premium Interior Solutions in Varanasi" />
+  <meta property="og:description" content="Premium plywood, glass, laminates, hardware, decorative panels and modern interior products in Varanasi." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── DESIGN TOKENS ─────────────────────────────────────────────────── */
+    :root {
+      --colors-primary:        #0a0a0a;
+      --colors-on-primary:     #ffffff;
+      --colors-canvas:         #ffffff;
+      --colors-inverse-canvas: #0a0a0a;
+      --colors-surface-soft:   #f4f4f2;
+      --colors-hairline:       #e0e0dc;
+      --colors-hairline-soft:  #ebebea;
+      --colors-ink:            #0a0a0a;
+      --colors-inverse-ink:    #ffffff;
+      --colors-accent-magenta: #e5006b;
+      --colors-semantic-success: #1aab5e;
+
+      --colors-block-lime:    #ccff4e;
+      --colors-block-lilac:   #d4b8ff;
+      --colors-block-cream:   #fff8ec;
+      --colors-block-mint:    #b5f5e4;
+      --colors-block-pink:    #ffd6e8;
+      --colors-block-coral:   #ff9e82;
+      --colors-block-navy:    #1b1e3d;
+
+      --spacing-hair:    1px;
+      --spacing-xxs:     4px;
+      --spacing-xs:      8px;
+      --spacing-sm:      12px;
+      --spacing-md:      16px;
+      --spacing-lg:      24px;
+      --spacing-xl:      32px;
+      --spacing-xxl:     48px;
+      --spacing-section: 80px;
+
+      --rounded-xs:   2px;
+      --rounded-sm:   6px;
+      --rounded-md:   8px;
+      --rounded-lg:   24px;
+      --rounded-xl:   32px;
+      --rounded-pill: 50px;
+      --rounded-full: 9999px;
+
+      --font-sans: 'Inter', 'SF Pro Display', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
+    }
+
+    /* ─── RESET ──────────────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-sans);
+      background: var(--colors-canvas);
+      color: var(--colors-ink);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      padding-bottom: 72px;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* ─── TYPOGRAPHY ─────────────────────────────────────────────────────── */
+    .display-xl {
+      font-size: clamp(40px, 10vw, 86px);
+      font-weight: 340;
+      line-height: 1.00;
+      letter-spacing: -1.72px;
+    }
+    .display-lg {
+      font-size: clamp(32px, 7vw, 64px);
+      font-weight: 340;
+      line-height: 1.10;
+      letter-spacing: -0.96px;
+    }
+    .subhead {
+      font-size: 22px;
+      font-weight: 340;
+      line-height: 1.35;
+      letter-spacing: -0.26px;
+    }
+    .body-lg {
+      font-size: 18px;
+      font-weight: 330;
+      line-height: 1.50;
+      letter-spacing: -0.14px;
+    }
+    .body {
+      font-size: 16px;
+      font-weight: 320;
+      line-height: 1.55;
+      letter-spacing: -0.10px;
+    }
+    .body-sm {
+      font-size: 14px;
+      font-weight: 330;
+      line-height: 1.45;
+    }
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 500;
+      line-height: 1.30;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+    .caption {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 400;
+      line-height: 1.00;
+      letter-spacing: 0.80px;
+      text-transform: uppercase;
+    }
+
+    /* ─── BUTTONS ─────────────────────────────────────────────────────────── */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--colors-primary);
+      color: var(--colors-on-primary);
+      font-family: var(--font-sans);
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: -0.10px;
+      padding: 5px 18px 5px 5px;
+      border-radius: var(--rounded-pill);
+      border: none;
+      cursor: pointer;
+      transition: opacity .18s ease, transform .14s ease, box-shadow .18s ease;
+      white-space: nowrap;
+      text-decoration: none;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.18), 0 4px 12px rgba(0,0,0,0.12);
+    }
+    .btn-primary:hover {
+      opacity: .90;
+      transform: translateY(-2px);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.22), 0 8px 20px rgba(0,0,0,0.14);
+    }
+    .btn-primary:active { transform: translateY(0); box-shadow: 0 1px 3px rgba(0,0,0,0.18); }
+
+    /* ── Icon disc ── */
+    .btn-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background .18s ease, transform .14s ease;
+    }
+    .btn-primary .btn-icon {
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+    .btn-primary:hover .btn-icon {
+      background: rgba(255,255,255,0.28);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--colors-canvas);
+      color: var(--colors-ink);
+      font-family: var(--font-sans);
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: -0.10px;
+      padding: 5px 18px 5px 5px;
+      border-radius: var(--rounded-pill);
+      border: 1.5px solid var(--colors-hairline);
+      cursor: pointer;
+      transition: background .18s ease, border-color .18s ease, transform .14s ease, box-shadow .18s ease;
+      white-space: nowrap;
+      text-decoration: none;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+    .btn-secondary:hover {
+      background: var(--colors-surface-soft);
+      border-color: rgba(0,0,0,0.35);
+      transform: translateY(-2px);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.10);
+    }
+    .btn-secondary .btn-icon {
+      background: var(--colors-surface-soft);
+      border: 1px solid var(--colors-hairline);
+    }
+    .btn-secondary:hover .btn-icon {
+      background: var(--colors-hairline);
+      border-color: rgba(0,0,0,0.14);
+    }
+
+    /* WhatsApp variant */
+    .btn-whatsapp {
+      background: #25D366;
+      color: #fff;
+      border: none;
+      box-shadow: 0 1px 3px rgba(37,211,102,0.30), 0 4px 14px rgba(37,211,102,0.22);
+    }
+    .btn-whatsapp:hover {
+      background: #22c55e;
+      box-shadow: 0 3px 8px rgba(37,211,102,0.35), 0 8px 22px rgba(37,211,102,0.25);
+    }
+    .btn-whatsapp .btn-icon {
+      background: rgba(255,255,255,0.22);
+      border: 1px solid rgba(255,255,255,0.14);
+    }
+    .btn-whatsapp:hover .btn-icon { background: rgba(255,255,255,0.32); }
+
+    /* Inverse variant (on dark blocks) */
+    .btn-secondary-inverse {
+      background: transparent;
+      color: var(--colors-inverse-ink);
+      border: 1.5px solid rgba(255,255,255,0.28);
+      box-shadow: none;
+    }
+    .btn-secondary-inverse .btn-icon {
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(255,255,255,0.18);
+    }
+    .btn-secondary-inverse:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.50);
+    }
+    .btn-secondary-inverse:hover .btn-icon { background: rgba(255,255,255,0.20); }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-sm);
+      align-items: center;
+    }
+
+    /* ─── FIXED BOTTOM BAR ────────────────────────────────────────────────── */
+    .fixed-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      border-top: 1px solid var(--colors-hairline-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+      padding: 0 var(--spacing-md);
+      height: 72px;
+    }
+    .fixed-bar-inner {
+      max-width: 540px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-xs);
+    }
+    .fixed-bar-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      padding: 6px 4px 8px;
+      border-radius: var(--rounded-md);
+      transition: background .15s ease;
+      text-decoration: none;
+      color: var(--colors-ink);
+      cursor: pointer;
+    }
+    .fixed-bar-btn:hover { background: var(--colors-surface-soft); }
+    .fixed-bar-btn-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--colors-surface-soft);
+      border: 1.5px solid var(--colors-hairline);
+      transition: background .15s ease, border-color .15s ease, transform .14s ease, box-shadow .15s ease;
+    }
+    .fixed-bar-btn:hover .fixed-bar-btn-icon { transform: translateY(-2px); }
+
+    /* Call — black disc */
+    .fixed-bar-btn.call-action .fixed-bar-btn-icon {
+      background: var(--colors-primary);
+      border-color: var(--colors-primary);
+      color: var(--colors-on-primary);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.24), 0 1px 2px rgba(0,0,0,0.18);
+    }
+    .fixed-bar-btn.call-action:hover .fixed-bar-btn-icon {
+      background: #222;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.30);
+    }
+
+    /* WhatsApp — green disc */
+    .fixed-bar-btn.primary-action .fixed-bar-btn-icon {
+      background: #25D366;
+      border-color: #25D366;
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(37,211,102,0.35);
+    }
+    .fixed-bar-btn.primary-action:hover .fixed-bar-btn-icon {
+      background: #22c55e;
+      box-shadow: 0 4px 14px rgba(37,211,102,0.45);
+    }
+
+    /* Directions — neutral grey disc */
+    .fixed-bar-btn.dir-action .fixed-bar-btn-icon {
+      background: var(--colors-surface-soft);
+      border-color: var(--colors-hairline);
+      color: var(--colors-ink);
+    }
+    .fixed-bar-btn.dir-action:hover .fixed-bar-btn-icon {
+      background: var(--colors-hairline);
+      border-color: rgba(0,0,0,0.18);
+    }
+
+    .fixed-bar-btn-label {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
+      opacity: 0.45;
+      color: var(--colors-ink);
+      line-height: 1;
+    }
+    .fixed-bar-btn.call-action .fixed-bar-btn-label { opacity: 0.72; }
+    .fixed-bar-btn.primary-action .fixed-bar-btn-label { color: #1aab5e; opacity: 0.90; }
+
+    /* ─── SOCIAL BUTTONS ───────────────────────────────────────────────────── */
+    .social-btn {
+      width: 46px;
+      height: 46px;
+      border-radius: var(--rounded-full);
+      background: var(--colors-surface-soft);
+      border: 1.5px solid var(--colors-hairline);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background .18s ease, border-color .18s ease, transform .14s ease, box-shadow .18s ease;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 0 0 0 transparent;
+    }
+    .social-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 14px rgba(0,0,0,0.12);
+    }
+    .social-btn.s-instagram:hover {
+      background: #fce8f3;
+      border-color: #e1306c;
+      color: #e1306c;
+      box-shadow: 0 5px 14px rgba(225,48,108,0.18);
+    }
+    .social-btn.s-facebook:hover {
+      background: #e4edfc;
+      border-color: #1877f2;
+      color: #1877f2;
+      box-shadow: 0 5px 14px rgba(24,119,242,0.18);
+    }
+    .social-btn.s-whatsapp:hover {
+      background: #d5f7e6;
+      border-color: #25d366;
+      color: #25d366;
+      box-shadow: 0 5px 14px rgba(37,211,102,0.22);
+    }
+    .social-btn.s-google:hover {
+      background: #fce8e8;
+      border-color: #ea4335;
+      box-shadow: 0 5px 14px rgba(234,67,53,0.16);
+    }
+    .social-btn svg { width: 20px; height: 20px; }
+
+    /* ─── LAYOUT ──────────────────────────────────────────────────────────── */
+    .container {
+      max-width: 540px;
+      margin: 0 auto;
+      padding: 0 var(--spacing-lg);
+    }
+    section { padding: var(--spacing-section) 0; }
+
+    /* ─── COLOR BLOCKS ───────────────────────────────────────────────────── */
+    .color-block {
+      border-radius: var(--rounded-lg);
+      margin: 0 var(--spacing-md);
+      padding: var(--spacing-xxl) var(--spacing-lg);
+    }
+    @media (max-width: 768px) {
+      .color-block { border-radius: 0; margin: 0; padding: var(--spacing-xxl) var(--spacing-lg); }
+    }
+    .block-lime   { background: var(--colors-block-lime); }
+    .block-lilac  { background: var(--colors-block-lilac); }
+    .block-cream  { background: var(--colors-block-cream); }
+    .block-mint   { background: var(--colors-block-mint); }
+    .block-pink   { background: var(--colors-block-pink); }
+    .block-coral  { background: var(--colors-block-coral); }
+    .block-navy   { background: var(--colors-block-navy); color: var(--colors-inverse-ink); }
+
+    .canvas-break { height: var(--spacing-section); }
+
+    /* ─── MARQUEE ─────────────────────────────────────────────────────────── */
+    .marquee-strip {
+      background: var(--colors-inverse-canvas);
+      color: var(--colors-inverse-ink);
+      height: 36px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .marquee-inner {
+      display: flex;
+      gap: 48px;
+      animation: marquee 22s linear infinite;
+      white-space: nowrap;
+    }
+    .marquee-inner span {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      opacity: 0.85;
+    }
+    @keyframes marquee {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ─── NAV ─────────────────────────────────────────────────────────────── */
+    .top-nav {
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: var(--spacing-hair) solid var(--colors-hairline);
+      height: 56px;
+      display: flex;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .top-nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 540px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-xs);
+    }
+    .nav-logo-mark {
+      width: 32px;
+      height: 32px;
+      background: var(--colors-primary);
+      border-radius: var(--rounded-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 800;
+      font-size: 13px;
+      letter-spacing: -0.5px;
+      flex-shrink: 0;
+    }
+    .nav-logo-text {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: -0.2px;
+      line-height: 1.2;
+      max-width: 160px;
+    }
+    .nav-cta { font-size: 13px; }
+
+    /* ─── HERO ────────────────────────────────────────────────────────────── */
+    .hero { padding: var(--spacing-xxl) 0 var(--spacing-section); }
+    .hero .container { display: flex; flex-direction: column; gap: var(--spacing-xl); }
+    .hero-logo-wrap { display: flex; justify-content: center; }
+    .hero-logo {
+      width: 96px;
+      height: 96px;
+      background: var(--colors-primary);
+      border-radius: var(--rounded-xl);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 2px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.18), 0 1px 4px rgba(0,0,0,0.12);
+    }
+    .hero-logo-rk {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--colors-block-lime);
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+    .hero-logo-sub {
+      font-family: var(--font-mono);
+      font-size: 7px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+    }
+    .hero-text { text-align: center; }
+    .hero-eyebrow { margin-bottom: var(--spacing-md); opacity: 0.5; }
+    .hero-title { margin-bottom: var(--spacing-md); }
+    .hero-tagline { margin-bottom: var(--spacing-xl); opacity: 0.72; }
+    .hero-desc { margin-bottom: var(--spacing-xl); }
+
+    /* ─── TRUST STATS ─────────────────────────────────────────────────────── */
+    .trust-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-sm);
+    }
+    .trust-stat {
+      background: var(--colors-surface-soft);
+      border-radius: var(--rounded-lg);
+      padding: var(--spacing-md) var(--spacing-sm);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      border: 1px solid var(--colors-hairline-soft);
+    }
+    .trust-stat-value {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1;
+    }
+    .trust-stat-label {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      opacity: 0.50;
+      line-height: 1.3;
+    }
+
+    /* ─── SOCIAL ROW ─────────────────────────────────────────────────────── */
+    .social-row {
+      display: flex;
+      justify-content: center;
+      gap: var(--spacing-sm);
+      flex-wrap: wrap;
+    }
+
+    /* ─── OWNER ───────────────────────────────────────────────────────────── */
+    .owner-inner { display: flex; flex-direction: column; gap: var(--spacing-xl); }
+    .owner-eyebrow { margin-bottom: var(--spacing-md); }
+    .owner-photo-wrap { display: flex; justify-content: center; }
+    .owner-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: var(--rounded-full);
+      background: linear-gradient(135deg, rgba(0,0,0,0.10), rgba(0,0,0,0.05));
+      border: 2px dashed rgba(0,0,0,0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 4px;
+      overflow: hidden;
+    }
+    .owner-photo-label {
+      font-family: var(--font-mono);
+      font-size: 8px;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      opacity: 0.40;
+    }
+    .owner-name {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+      margin-bottom: var(--spacing-sm);
+    }
+    .owner-bio { opacity: 0.78; margin-bottom: var(--spacing-lg); }
+    .owner-quote {
+      font-size: 20px;
+      font-weight: 540;
+      line-height: 1.35;
+      letter-spacing: -0.3px;
+      border-left: 3px solid var(--colors-primary);
+      padding-left: var(--spacing-md);
+      font-style: italic;
+    }
+
+    /* ─── PRODUCTS ────────────────────────────────────────────────────────── */
+    .section-header { margin-bottom: var(--spacing-xxl); }
+    .section-eyebrow { margin-bottom: var(--spacing-md); opacity: 0.5; }
+    .section-title { margin-bottom: var(--spacing-md); }
+    .section-desc { opacity: 0.68; }
+
+    .product-categories { display: flex; flex-direction: column; gap: var(--spacing-md); }
+    .product-category {
+      border: var(--spacing-hair) solid var(--colors-hairline);
+      border-radius: var(--rounded-lg);
+      overflow: hidden;
+      transition: box-shadow .18s ease;
+    }
+    .product-category:has(.product-cat-header.open) {
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+    .product-cat-header {
+      background: var(--colors-surface-soft);
+      padding: var(--spacing-sm) var(--spacing-md);
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-sm);
+      cursor: pointer;
+      user-select: none;
+      transition: background .15s ease;
+    }
+    .product-cat-header:hover { background: var(--colors-hairline-soft); }
+    .product-cat-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: var(--rounded-md);
+      background: var(--colors-primary);
+      color: var(--colors-on-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.18);
+    }
+    .product-cat-name {
+      flex: 1;
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: -0.2px;
+    }
+    .product-cat-count {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      opacity: 0.45;
+      background: var(--colors-canvas);
+      padding: 3px 8px;
+      border-radius: var(--rounded-full);
+      border: var(--spacing-hair) solid var(--colors-hairline);
+    }
+    .product-cat-toggle {
+      font-size: 18px;
+      opacity: 0.35;
+      transition: transform .2s ease;
+      line-height: 1;
+    }
+    .product-cat-body {
+      padding: var(--spacing-md) var(--spacing-md) var(--spacing-lg);
+      display: none;
+      border-top: 1px solid var(--colors-hairline-soft);
+    }
+    .product-cat-body.open { display: block; }
+    .product-cat-header.open .product-cat-toggle { transform: rotate(90deg); }
+    .product-tags { display: flex; flex-wrap: wrap; gap: var(--spacing-xs); }
+    .product-tag {
+      display: inline-flex;
+      align-items: center;
+      background: var(--colors-canvas);
+      border: var(--spacing-hair) solid var(--colors-hairline);
+      border-radius: var(--rounded-pill);
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: -0.1px;
+      transition: background .15s ease, border-color .15s ease, transform .12s ease;
+    }
+    .product-tag:hover {
+      background: var(--colors-surface-soft);
+      border-color: rgba(0,0,0,0.30);
+      transform: translateY(-1px);
+    }
+
+    /* ─── GALLERY ─────────────────────────────────────────────────────────── */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-sm);
+    }
+    .gallery-card {
+      border-radius: var(--rounded-lg);
+      aspect-ratio: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--spacing-sm);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .gallery-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+    }
+    .gallery-card-icon { font-size: 40px; line-height: 1; }
+    .gallery-card-label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      opacity: 0.55;
+      text-align: center;
+      padding: 0 var(--spacing-sm);
+    }
+    .gallery-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(10,10,10,0.55);
+      border-radius: var(--rounded-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity .18s ease;
+    }
+    .gallery-card:hover .gallery-card-overlay { opacity: 1; }
+    .gallery-card-overlay-text {
+      color: #fff;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    .gallery-card:nth-child(1) { background: #FFF8EC; }
+    .gallery-card:nth-child(2) { background: #CCF5E4; }
+    .gallery-card:nth-child(3) { background: #FFE4F0; }
+    .gallery-card:nth-child(4) { background: #E4F0FF; }
+    .gallery-card:nth-child(5) { background: #F5F0FF; }
+    .gallery-card:nth-child(6) { background: #FFF0E4; }
+    .gallery-card:nth-child(7) { background: #E4FFE4; }
+    .gallery-card:nth-child(8) { background: var(--colors-block-mint); }
+
+    /* ─── LIGHTBOX ───────────────────────────────────────────────────────── */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.78);
+      backdrop-filter: blur(6px);
+      z-index: 999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: var(--spacing-lg);
+    }
+    .lightbox.open { display: flex; }
+    .lightbox-inner {
+      background: var(--colors-canvas);
+      border-radius: var(--rounded-xl);
+      max-width: 420px;
+      width: 100%;
+      padding: var(--spacing-xxl) var(--spacing-xl);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--spacing-lg);
+      position: relative;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.28);
+    }
+    .lightbox-close {
+      position: absolute;
+      top: var(--spacing-md);
+      right: var(--spacing-md);
+      width: 34px;
+      height: 34px;
+      border-radius: var(--rounded-full);
+      background: var(--colors-surface-soft);
+      border: 1px solid var(--colors-hairline);
+      cursor: pointer;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background .15s ease;
+    }
+    .lightbox-close:hover { background: var(--colors-hairline); }
+    .lightbox-icon { font-size: 64px; line-height: 1; }
+    .lightbox-name {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.4px;
+      text-align: center;
+    }
+    .lightbox-desc {
+      font-size: 14px;
+      opacity: 0.62;
+      text-align: center;
+      line-height: 1.60;
+    }
+
+    /* ─── SHOWROOM ───────────────────────────────────────────────────────── */
+    .showroom-inner { display: flex; flex-direction: column; gap: var(--spacing-xl); }
+    .map-frame {
+      border-radius: var(--rounded-lg);
+      overflow: hidden;
+      border: var(--spacing-hair) solid rgba(0,0,0,0.12);
+      height: 240px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+    .map-frame iframe { width: 100%; height: 100%; border: none; display: block; }
+    .address-card { display: flex; gap: var(--spacing-md); align-items: flex-start; }
+    .address-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--rounded-sm);
+      background: rgba(0,0,0,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .address-label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      opacity: 0.45;
+      margin-bottom: 6px;
+    }
+    .address-lines {
+      font-size: 14px;
+      font-weight: 330;
+      line-height: 1.65;
+      opacity: 0.82;
+    }
+
+    /* ─── WHY ────────────────────────────────────────────────────────────── */
+    .why-inner { display: flex; flex-direction: column; gap: var(--spacing-lg); }
+    .why-items { display: flex; flex-direction: column; gap: var(--spacing-sm); }
+    .why-item {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--spacing-md);
+      padding: var(--spacing-md) var(--spacing-lg);
+      border-radius: var(--rounded-lg);
+      background: rgba(255,255,255,0.45);
+      transition: background .15s ease;
+    }
+    .why-item:hover { background: rgba(255,255,255,0.68); }
+    .why-checkmark {
+      width: 28px;
+      height: 28px;
+      border-radius: var(--rounded-full);
+      background: var(--colors-primary);
+      color: var(--colors-on-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .why-item-title {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: -0.2px;
+      margin-bottom: 3px;
+    }
+    .why-item-desc { font-size: 13px; opacity: 0.70; line-height: 1.55; }
+
+    /* ─── FOOTER ──────────────────────────────────────────────────────────── */
+    footer {
+      background: var(--colors-canvas);
+      border-top: var(--spacing-hair) solid var(--colors-hairline);
+      padding: var(--spacing-xxl) 0 var(--spacing-xl);
+    }
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-xl);
+      align-items: center;
+      text-align: center;
+    }
+    .footer-logo-row { display: flex; align-items: center; gap: var(--spacing-sm); }
+    .footer-logo-mark {
+      width: 36px;
+      height: 36px;
+      background: var(--colors-primary);
+      border-radius: var(--rounded-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--colors-block-lime);
+      font-weight: 800;
+      font-size: 15px;
+      letter-spacing: -0.5px;
+    }
+    .footer-brand {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+    .footer-address { font-size: 13px; opacity: 0.50; line-height: 1.65; }
+    .footer-social { display: flex; gap: var(--spacing-sm); justify-content: center; }
+    .footer-social-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--rounded-full);
+      background: var(--colors-surface-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background .15s ease, transform .14s ease;
+      border: var(--spacing-hair) solid var(--colors-hairline);
+    }
+    .footer-social-btn:hover { background: var(--colors-hairline); transform: translateY(-2px); }
+    .footer-social-btn svg { width: 18px; height: 18px; }
+    .footer-legal {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      opacity: 0.32;
+    }
+
+    /* ─── PHONE TAG ──────────────────────────────────────────────────────── */
+    .phone-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--colors-surface-soft);
+      border-radius: var(--rounded-pill);
+      padding: 5px 14px 5px 10px;
+      font-size: 13px;
+      font-weight: 500;
+      border: var(--spacing-hair) solid var(--colors-hairline);
+      text-decoration: none;
+      color: var(--colors-ink);
+      transition: background .15s ease;
+    }
+    .phone-tag:hover { background: var(--colors-hairline); }
+
+    /* ─── SECTION HELPERS ─────────────────────────────────────────────────── */
+    .section-padded {
+      padding-top: var(--spacing-section);
+      padding-bottom: var(--spacing-section);
+    }
+
+    /* ─── ANIMATIONS ──────────────────────────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { opacity: 0; animation: fadeUp 0.55s ease forwards; }
+    .fade-up-1 { animation-delay: 0.05s; }
+    .fade-up-2 { animation-delay: 0.15s; }
+    .fade-up-3 { animation-delay: 0.25s; }
+    .fade-up-4 { animation-delay: 0.35s; }
+    .fade-up-5 { animation-delay: 0.45s; }
+    .fade-up-6 { animation-delay: 0.55s; }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+  <div class="container">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-mark">RK</div>
+      <div class="nav-logo-text">New RK Glass &amp; Plywood</div>
+    </a>
+    <a href="tel:+917408889888" class="btn-primary nav-cta" style="padding:4px 16px 4px 4px;font-size:13px;">
+      <span class="btn-icon" style="width:26px;height:26px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.28-1.28a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      </span>
+      Call Now
+    </a>
+  </div>
+</nav>
+
+<!-- MARQUEE -->
+<div class="marquee-strip" aria-hidden="true">
+  <div class="marquee-inner">
+    <span>Premium Plywood</span><span>·</span>
+    <span>Toughened Glass</span><span>·</span>
+    <span>Designer Laminates</span><span>·</span>
+    <span>Fancy Hardware</span><span>·</span>
+    <span>Decorative Panels</span><span>·</span>
+    <span>Interior Solutions</span><span>·</span>
+    <span>Varanasi's Trusted Store</span><span>·</span>
+    <span>Premium Plywood</span><span>·</span>
+    <span>Toughened Glass</span><span>·</span>
+    <span>Designer Laminates</span><span>·</span>
+    <span>Fancy Hardware</span><span>·</span>
+    <span>Decorative Panels</span><span>·</span>
+    <span>Interior Solutions</span><span>·</span>
+    <span>Varanasi's Trusted Store</span><span>·</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+
+    <div class="hero-logo-wrap fade-up fade-up-1">
+      <div class="hero-logo" role="img" aria-label="RK Logo">
+        <div class="hero-logo-rk">RK</div>
+        <div class="hero-logo-sub">Est. Varanasi</div>
+      </div>
+    </div>
+
+    <div class="hero-text">
+      <div class="eyebrow hero-eyebrow fade-up fade-up-2">Varanasi · Uttar Pradesh</div>
+      <h1 class="display-xl hero-title fade-up fade-up-2">New RK Glass &amp; Plywood Centre</h1>
+      <p class="subhead hero-tagline fade-up fade-up-3">Your one-stop solution for modern interior spaces.</p>
+      <p class="body-lg hero-desc fade-up fade-up-4" style="opacity:0.72;">
+        Premium plywood, glass, laminates, decorative panels and modern interior solutions under one roof.
+      </p>
+    </div>
+
+    <div class="trust-stats fade-up fade-up-4">
+      <div class="trust-stat">
+        <div class="trust-stat-value">134+</div>
+        <div class="trust-stat-label">Products</div>
+      </div>
+      <div class="trust-stat">
+        <div class="trust-stat-value">238+</div>
+        <div class="trust-stat-label">Followers</div>
+      </div>
+      <div class="trust-stat">
+        <div class="trust-stat-value" style="display:flex;align-items:center;justify-content:center;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="trust-stat-label">Trusted Store</div>
+      </div>
+    </div>
+
+    <div class="btn-group fade-up fade-up-5" style="justify-content:center;">
+      <a href="tel:+917408889888" class="btn-primary">
+        <span class="btn-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        </span>
+        Call Now
+      </a>
+      <a href="https://wa.me/917408889888" target="_blank" rel="noopener" class="btn-primary btn-whatsapp">
+        <span class="btn-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        </span>
+        WhatsApp
+      </a>
+    </div>
+
+    <div class="btn-group fade-up fade-up-5" style="justify-content:center;">
+      <a href="https://maps.google.com/?q=New+RK+Glass+Plywood+Centre+Manduadih+Varanasi" target="_blank" rel="noopener" class="btn-secondary">
+        <span class="btn-icon">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </span>
+        Get Directions
+      </a>
+      <a href="https://www.google.com/search?q=New+RK+Glass+Plywood+Centre+Varanasi" target="_blank" rel="noopener" class="btn-secondary">
+        <span class="btn-icon">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </span>
+        Google
+      </a>
+    </div>
+
+    <div class="social-row fade-up fade-up-6">
+      <a href="https://instagram.com/newrkglassandplywoodcentre" target="_blank" rel="noopener" class="social-btn s-instagram" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+        </svg>
+      </a>
+      <a href="https://facebook.com" target="_blank" rel="noopener" class="social-btn s-facebook" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+      </a>
+      <a href="https://wa.me/917408889888" target="_blank" rel="noopener" class="social-btn s-whatsapp" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      </a>
+      <a href="https://www.google.com/search?q=New+RK+Glass+Plywood+Centre+Varanasi" target="_blank" rel="noopener" class="social-btn s-google" aria-label="Google Business Profile">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+          <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+          <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+          <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- OWNER (CREAM BLOCK) -->
+<div class="color-block block-cream reveal">
+  <div class="container">
+    <div class="owner-inner">
+      <div>
+        <div class="eyebrow owner-eyebrow section-eyebrow">About the owner</div>
+        <h2 class="display-lg" style="margin-bottom:var(--spacing-xl);">Meet The Owner</h2>
+      </div>
+      <div class="owner-photo-wrap">
+        <div class="owner-photo" aria-label="Owner photo placeholder">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.25"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <div class="owner-photo-label">Photo Coming Soon</div>
+        </div>
+      </div>
+      <div>
+        <h3 class="owner-name">Ankit Motwani</h3>
+        <p class="body-lg owner-bio">
+          Passionate about helping customers create beautiful spaces with premium materials, modern hardware and reliable interior solutions. Dedicated to quality, trust and customer satisfaction.
+        </p>
+        <blockquote class="owner-quote">
+          "Every space deserves premium finishing."
+        </blockquote>
+      </div>
+      <a href="tel:+917408889888" class="btn-primary" style="align-self:flex-start;">
+        <span class="btn-icon">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.28-1.28a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </span>
+        Talk to Ankit
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section class="section-padded reveal">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow section-eyebrow">Our catalogue</div>
+      <h2 class="display-lg section-title">What We Sell</h2>
+      <p class="body-lg section-desc">134+ premium products across 6 categories, all under one roof in Varanasi.</p>
+    </div>
+
+    <div class="product-categories">
+
+      <div class="product-category">
+        <div class="product-cat-header open" onclick="toggleCat(this)">
+          <div class="product-cat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="4" rx="1"/><rect x="2" y="10" width="20" height="4" rx="1"/><rect x="2" y="17" width="20" height="4" rx="1"/></svg></div>
+          <div class="product-cat-name">Plywood</div>
+          <div class="product-cat-count">7 items</div>
+          <div class="product-cat-toggle">›</div>
+        </div>
+        <div class="product-cat-body open">
+          <div class="product-tags">
+            <span class="product-tag">Commercial Plywood</span>
+            <span class="product-tag">Hardwood Plywood</span>
+            <span class="product-tag">Block Boards</span>
+            <span class="product-tag">HDMR Boards</span>
+            <span class="product-tag">MDF Boards</span>
+            <span class="product-tag">WPC Boards</span>
+            <span class="product-tag">PVC Boards</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-category">
+        <div class="product-cat-header" onclick="toggleCat(this)">
+          <div class="product-cat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg></div>
+          <div class="product-cat-name">Glass &amp; Mirrors</div>
+          <div class="product-cat-count">6 items</div>
+          <div class="product-cat-toggle">›</div>
+        </div>
+        <div class="product-cat-body">
+          <div class="product-tags">
+            <span class="product-tag">Toughened Glass</span>
+            <span class="product-tag">Designer Glass</span>
+            <span class="product-tag">Decorative Glass</span>
+            <span class="product-tag">Shower Cubicles</span>
+            <span class="product-tag">Glass Partitions</span>
+            <span class="product-tag">Premium Mirrors</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-category">
+        <div class="product-cat-header" onclick="toggleCat(this)">
+          <div class="product-cat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l10-4 10 4-10 4z"/><path d="M2 12l10-4 10 4-10 4z"/><path d="M2 18l10-4 10 4"/></svg></div>
+          <div class="product-cat-name">Laminates &amp; Surfaces</div>
+          <div class="product-cat-count">6 items</div>
+          <div class="product-cat-toggle">›</div>
+        </div>
+        <div class="product-cat-body">
+          <div class="product-tags">
+            <span class="product-tag">High Gloss Laminates</span>
+            <span class="product-tag">Textured Laminates</span>
+            <span class="product-tag">Acrylic Laminates</span>
+            <span class="product-tag">Decorative Laminates</span>
+            <span class="product-tag">Mica Sheets</span>
+            <span class="product-tag">Veneers</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-category">
+        <div class="product-cat-header" onclick="toggleCat(this)">
+          <div class="product-cat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg></div>
+          <div class="product-cat-name">Hardware &amp; Accessories</div>
+          <div class="product-cat-count">13 items</div>
+          <div class="product-cat-toggle">›</div>
+        </div>
+        <div class="product-cat-body">
+          <div class="product-tags">
+            <span class="product-tag">Designer Door Handles</span>
+            <span class="product-tag">Cabinet Handles</span>
+            <span class="product-tag">Wardrobe Handles</span>
+            <span class="product-tag">Mortise Locks</span>
+            <span class="product-tag">Tower Bolts</span>
+            <span class="product-tag">Kitchen Baskets</span>
+            <span class="product-tag">Cutlery Baskets</span>
+            <span class="product-tag">Tandem Systems</span>
+            <span class="product-tag">Drawer Channels</span>
+            <span class="product-tag">Soft-close Systems</span>
+            <span class="product-tag">Profile Handles</span>
+            <span class="product-tag">Aldrops</span>
+            <span class="product-tag">Door Stoppers</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-category">
+        <div class="product-cat-header" onclick="toggleCat(this)">
+          <div class="product-cat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V3h16v18"/><path d="M2 21h20"/><circle cx="15.5" cy="12" r="0.8" fill="currentColor"/></svg></div>
+          <div class="product-cat-name">Doors</div>
+          <div class="product-cat-count">3 items</div>
+          <div class="product-cat-toggle">›</div>
+        </div>
+        <div class="product-cat-body">
+          <div class="product-tags">
+            <span class="product-tag">Flush Doors</span>
+            <span class="product-tag">Ready-made Doors</span>
+            <span class="product-tag">Wooden Doors</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-category">
+        <div class="product-cat-header" onclick="toggleCat(this)">
+          <div class="product-cat-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="9" height="6" rx="0.5"/><rect x="13" y="2" width="9" height="6" rx="0.5"/><rect x="2" y="10" width="5" height="6" rx="0.5"/><rect x="9" y="10" width="6" height="6" rx="0.5"/><rect x="17" y="10" width="5" height="6" rx="0.5"/><rect x="2" y="18" width="9" height="4" rx="0.5"/><rect x="13" y="18" width="9" height="4" rx="0.5"/></svg></div>
+          <div class="product-cat-name">Decorative Wall Solutions</div>
+          <div class="product-cat-count">6 items</div>
+          <div class="product-cat-toggle">›</div>
+        </div>
+        <div class="product-cat-body">
+          <div class="product-tags">
+            <span class="product-tag">Louvers Panels</span>
+            <span class="product-tag">CNC Panels</span>
+            <span class="product-tag">Wall Cladding Panels</span>
+            <span class="product-tag">Charcoal Panels</span>
+            <span class="product-tag">Decorative Wall Panels</span>
+            <span class="product-tag">Mouldings</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY (MINT BLOCK) -->
+<div class="color-block block-mint reveal">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow section-eyebrow">Showcase</div>
+      <h2 class="display-lg section-title">Product Gallery</h2>
+      <p class="body section-desc">Tap any tile for details.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-card" onclick="openLightbox('Door Handles','lb_handles','Designer and profile handles for every cabinet, wardrobe and kitchen door.')">
+        <div class="gallery-card-icon"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8h10a2 2 0 010 4H7"/><path d="M7 8a2 2 0 000 4"/><line x1="7" y1="12" x2="7" y2="16"/><line x1="17" y1="12" x2="17" y2="16"/></svg></div>
+        <div class="gallery-card-label">Door Handles</div>
+        <div class="gallery-card-overlay"><span class="gallery-card-overlay-text">View Details →</span></div>
+      </div>
+      <div class="gallery-card" onclick="openLightbox('Decorative Panels','lb_panels','CNC panels, louvers, charcoal panels and wall cladding for stunning interiors.')">
+        <div class="gallery-card-icon"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg></div>
+        <div class="gallery-card-label">Decorative Panels</div>
+        <div class="gallery-card-overlay"><span class="gallery-card-overlay-text">View Details →</span></div>
+      </div>
+      <div class="gallery-card" onclick="openLightbox('Glass Partitions','lb_glass_p','Toughened and designer glass partitions for offices, homes and showrooms.')">
+        <div class="gallery-card-icon"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="18" rx="1"/><rect x="13" y="3" width="8" height="18" rx="1"/><line x1="7" y1="3" x2="7" y2="21"/><line x1="17" y1="3" x2="17" y2="21"/></svg></div>
+        <div class="gallery-card-label">Glass Partitions</div>
+        <div class="gallery-card-overlay"><span class="gallery-card-overlay-text">View Details →</span></div>
+      </div>
+      <div class="gallery-card" onclick="openLightbox('Premium Plywood','lb_plywood','Commercial, hardwood and WPC boards for all construction needs.')">
+        <div class="gallery-card-icon"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="3" rx="0.5"/><rect x="2" y="9" width="20" height="3" rx="0.5"/><rect x="2" y="14" width="20" height="3" rx="0.5"/><rect x="2" y="19" width="20" height="2" rx="0.5"/></svg></div>
+        <div class="gallery-card-label">Premium Plywood</div>
+        <div class="gallery-card-overlay"><span class="gallery-card-overlay-text">View Details →</span></div>
+      </div>
+      <div class="gallery-card" onclick="openLightbox('Laminates','lb_laminates','High-gloss, textured and acrylic laminates in hundreds of shades.')">
+        <div class="gallery-card-icon"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7l10-4 10 4-10 4z"/><path d="M2 13l10-4 10 4-10 4z"/><path d="M2 19l10-4 10 4"/></svg></div>
+        <div class="gallery-card-label">Laminates</div>
+        <div class="gallery-card-overlay"><span class="gallery-card-overlay-text">View Details →</span></div>
+      </div>
+      <div class="gallery-card" onclick="openLightbox('Designer Glass','lb_des_glass','Frosted, tinted and patterned glass for modern aesthetic interiors.')">
+        <div class="gallery-card-icon"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/><path d="M9 9l6 6M15 9l-6 6"/></svg></div>
+        <div class="gallery-card-label">Designer Glass</div>
+        <div class="gallery-card-overlay"><span class="gallery-card-overlay-text">View Details →</span></div>
+      </div>
+      <div class="gallery-card" onclick="openLightbox('Wardrobes &amp; Kitchens','lb_wardrobe','Complete hardware systems: tandem drawers, soft-close channels and baskets.')">
+        <div class="gallery-card-icon"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="2" width="18" height="20" rx="1"/><line x1="12" y1="2" x2="12" y2="22"/><circle cx="10" cy="12" r="1" fill="currentColor"/><circle cx="14" cy="12" r="1" fill="currentColor"/><line x1="3" y1="18" x2="21" y2="18"/></svg></div>
+        <div class="gallery-card-label">Wardrobes &amp; Kitchens</div>
+        <div class="gallery-card-overlay"><span class="gallery-card-overlay-text">View Details →</span></div>
+      </div>
+      <div class="gallery-card" onclick="openLightbox('Shower Cubicles','lb_shower','Elegant frameless and framed shower cubicle solutions.')">
+        <div class="gallery-card-icon"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="12" height="18" rx="1"/><line x1="15" y1="3" x2="15" y2="21"/><line x1="3" y1="21" x2="21" y2="21"/><line x1="21" y1="3" x2="21" y2="21"/><circle cx="9" cy="10" r="1" fill="currentColor"/><circle cx="6" cy="14" r="0.7" fill="currentColor"/><circle cx="12" cy="14" r="0.7" fill="currentColor"/></svg></div>
+        <div class="gallery-card-label">Shower Cubicles</div>
+        <div class="gallery-card-overlay"><span class="gallery-card-overlay-text">View Details →</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SHOWROOM (LIME BLOCK) -->
+<div class="canvas-break"></div>
+<div class="color-block block-lime reveal">
+  <div class="container">
+    <div class="showroom-inner">
+      <div>
+        <div class="eyebrow section-eyebrow" style="opacity:0.5;margin-bottom:var(--spacing-md);">Find Us</div>
+        <h2 class="display-lg" style="margin-bottom:var(--spacing-xl);">Visit Our Showroom</h2>
+      </div>
+
+      <div class="map-frame">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.0917261771565!2d82.96186370000001!3d25.3011221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e334b9d7cea95%3A0x7cca685afc388d5f!2sNew%20RK%20Glass%20%26%20Plywood%20Shop%20in%20Varanasi!5e0!3m2!1sen!2sin!4v1779098939551!5m2!1sen!2sin"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="New RK Glass &amp; Plywood Centre location"
+        ></iframe>
+      </div>
+
+      <div class="address-card">
+        <div class="address-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div>
+          <div class="address-label">Address</div>
+          <div class="address-lines">
+            Ahead of Police Station, Araji No. 5/2,<br>
+            Manduadih Road, Sarkaripura Rd,<br>
+            Manduwadih, Varanasi,<br>
+            Uttar Pradesh 221103
+          </div>
+        </div>
+      </div>
+
+      <div class="address-card">
+        <div class="address-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.28-1.28a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+        <div>
+          <div class="address-label">Phone</div>
+          <a href="tel:+917408889888" style="font-size:18px;font-weight:600;letter-spacing:-0.3px;text-decoration:none;opacity:0.85;">+91 74088 89888</a>
+        </div>
+      </div>
+
+      <div class="btn-group">
+        <a href="tel:+917408889888" class="btn-primary">
+          <span class="btn-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.28-1.28a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></span>
+          Call Now
+        </a>
+        <a href="https://maps.google.com/?q=New+RK+Glass+Plywood+Centre+Manduadih+Varanasi" target="_blank" rel="noopener" class="btn-secondary">
+          <span class="btn-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          Get Directions
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY CHOOSE US (NAVY BLOCK) -->
+<div class="canvas-break"></div>
+<div class="color-block block-navy reveal">
+  <div class="container">
+    <div class="why-inner">
+      <div>
+        <div class="eyebrow section-eyebrow" style="opacity:0.40;margin-bottom:var(--spacing-md);color:var(--colors-inverse-ink);">Why us</div>
+        <h2 class="display-lg" style="color:var(--colors-inverse-ink);margin-bottom:var(--spacing-sm);">Why Customers Choose Us</h2>
+        <p class="body-lg" style="opacity:0.55;color:var(--colors-inverse-ink);">Varanasi's trusted name for premium interior materials.</p>
+      </div>
+
+      <div class="why-items">
+        <div class="why-item">
+          <div class="why-checkmark" style="background:var(--colors-block-lime);color:var(--colors-primary);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div>
+            <div class="why-item-title">Premium Quality Materials</div>
+            <div class="why-item-desc">Only branded, ISI-certified and quality-tested products from trusted manufacturers.</div>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-checkmark" style="background:var(--colors-block-lime);color:var(--colors-primary);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div>
+            <div class="why-item-title">Modern Designs</div>
+            <div class="why-item-desc">Latest trends in laminates, glass, panels and hardware for contemporary spaces.</div>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-checkmark" style="background:var(--colors-block-lime);color:var(--colors-primary);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div>
+            <div class="why-item-title">Trusted Service</div>
+            <div class="why-item-desc">Honest advice, reliable delivery and support from a family-run business you can count on.</div>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-checkmark" style="background:var(--colors-block-lime);color:var(--colors-primary);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div>
+            <div class="why-item-title">Wide Product Selection</div>
+            <div class="why-item-desc">134+ products across plywood, glass, laminates, hardware, doors and wall panels.</div>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-checkmark" style="background:var(--colors-block-lime);color:var(--colors-primary);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div>
+            <div class="why-item-title">Interior Solutions Under One Roof</div>
+            <div class="why-item-desc">From raw boards to finished hardware. Everything for your home or project, one stop.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-group">
+        <a href="https://wa.me/917408889888" target="_blank" rel="noopener" class="btn-primary btn-whatsapp">
+          <span class="btn-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></span>
+          Chat on WhatsApp
+        </a>
+        <a href="tel:+917408889888" class="btn-secondary btn-secondary-inverse">
+          <span class="btn-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.28-1.28a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></span>
+          Call Now
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="canvas-break"></div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo-row">
+        <div class="footer-logo-mark">RK</div>
+        <div class="footer-brand">New RK Glass &amp; Plywood Centre</div>
+      </div>
+      <p class="footer-address">
+        Manduadih Road, Sarkaripura Rd,<br>
+        Manduwadih, Varanasi 221103
+      </p>
+      <a href="tel:+917408889888" class="phone-tag">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.28-1.28a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        +91 74088 89888
+      </a>
+      <div class="footer-social">
+        <a href="https://instagram.com/newrkglassandplywoodcentre" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="https://wa.me/917408889888" target="_blank" rel="noopener" class="footer-social-btn" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        </a>
+        <a href="https://www.google.com/search?q=New+RK+Glass+Plywood+Centre+Varanasi" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Google Business">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+          </svg>
+        </a>
+      </div>
+      <div class="footer-legal">© 2025 New RK Glass &amp; Plywood Centre · Varanasi · All rights reserved</div>
+    </div>
+  </div>
+</footer>
+
+<!-- FIXED BOTTOM BAR -->
+<div class="fixed-bar" role="navigation" aria-label="Quick contact">
+  <div class="fixed-bar-inner">
+    <a href="tel:+917408889888" class="fixed-bar-btn call-action">
+      <div class="fixed-bar-btn-icon">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.7A2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.28-1.28a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      </div>
+      <div class="fixed-bar-btn-label">Call</div>
+    </a>
+    <a href="https://wa.me/917408889888" target="_blank" rel="noopener" class="fixed-bar-btn primary-action">
+      <div class="fixed-bar-btn-icon">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      </div>
+      <div class="fixed-bar-btn-label">WhatsApp</div>
+    </a>
+    <a href="https://maps.google.com/?q=New+RK+Glass+Plywood+Centre+Manduadih+Varanasi" target="_blank" rel="noopener" class="fixed-bar-btn dir-action">
+      <div class="fixed-bar-btn-icon">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <div class="fixed-bar-btn-label">Directions</div>
+    </a>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-name" onclick="closeLightbox(event)">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">✕</button>
+    <div class="lightbox-icon" id="lightbox-icon"></div>
+    <div class="lightbox-name" id="lightbox-name">Product</div>
+    <div class="lightbox-desc" id="lightbox-desc">Description</div>
+    <div class="btn-group" style="justify-content:center;">
+      <a href="https://wa.me/917408889888" target="_blank" rel="noopener" class="btn-primary btn-whatsapp">
+        <span class="btn-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></span>
+        Enquire on WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  /* Accordion */
+  function toggleCat(header) {
+    const body = header.nextElementSibling;
+    const isOpen = header.classList.contains('open');
+    header.classList.toggle('open', !isOpen);
+    body.classList.toggle('open', !isOpen);
+  }
+
+  /* Lightbox */
+  const LIGHTBOX_ICONS = {
+    lb_handles:  `<svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8h10a2 2 0 010 4H7"/><path d="M7 8a2 2 0 000 4"/><line x1="7" y1="12" x2="7" y2="16"/><line x1="17" y1="12" x2="17" y2="16"/></svg>`,
+    lb_panels:   `<svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>`,
+    lb_glass_p:  `<svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="18" rx="1"/><rect x="13" y="3" width="8" height="18" rx="1"/><line x1="7" y1="3" x2="7" y2="21"/><line x1="17" y1="3" x2="17" y2="21"/></svg>`,
+    lb_plywood:  `<svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="3" rx="0.5"/><rect x="2" y="9" width="20" height="3" rx="0.5"/><rect x="2" y="14" width="20" height="3" rx="0.5"/><rect x="2" y="19" width="20" height="2" rx="0.5"/></svg>`,
+    lb_laminates:`<svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7l10-4 10 4-10 4z"/><path d="M2 13l10-4 10 4-10 4z"/><path d="M2 19l10-4 10 4"/></svg>`,
+    lb_des_glass:`<svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>`,
+    lb_wardrobe: `<svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="2" width="18" height="20" rx="1"/><line x1="12" y1="2" x2="12" y2="22"/><circle cx="10" cy="12" r="1" fill="currentColor"/><circle cx="14" cy="12" r="1" fill="currentColor"/><line x1="3" y1="18" x2="21" y2="18"/></svg>`,
+    lb_shower:   `<svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="12" height="18" rx="1"/><line x1="15" y1="3" x2="15" y2="21"/><line x1="3" y1="21" x2="21" y2="21"/><line x1="21" y1="3" x2="21" y2="21"/><circle cx="9" cy="10" r="1" fill="currentColor"/></svg>`
+  };
+
+  function openLightbox(name, iconKey, desc) {
+    document.getElementById('lightbox-icon').innerHTML = LIGHTBOX_ICONS[iconKey] || '';
+    document.getElementById('lightbox-name').textContent = name;
+    document.getElementById('lightbox-desc').textContent = desc;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox(e) {
+    if (e && e.target !== document.getElementById('lightbox') && !e.target.classList.contains('lightbox-close')) return;
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox({ target: document.getElementById('lightbox') }); });
+
+  /* Scroll reveal */
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.10 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
